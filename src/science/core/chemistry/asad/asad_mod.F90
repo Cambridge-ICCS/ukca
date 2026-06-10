@@ -351,6 +351,8 @@ LOGICAL :: ljacx
 ! shared between asad_spimpmjp and asad_spmjpdriv
 LOGICAL :: ltrig
 
+INTEGER :: ncsteps_stashed
+
 CHARACTER(LEN=*), PARAMETER, PRIVATE :: ModuleName='ASAD_MOD'
 
 ! Variables which should be stored separately on each thread
@@ -358,7 +360,7 @@ CHARACTER(LEN=*), PARAMETER, PRIVATE :: ModuleName='ASAD_MOD'
 !$OMP               f, fdot, fj, fpsc1, fpsc2, ftilde,                         &
 !$OMP               interval, ipa, jsubs,                                      &
 !$OMP               lati, linfam, ltrig, modified_map,                         &
-!$OMP               ncsteps, p, pd, pmintnd, prk, prod,                        &
+!$OMP               ncsteps, ncsteps_stashed, p, pd, pmintnd, prk, prod,       &
 !$OMP               qa, ratio, rk,                                             &
 !$OMP               sh2o, shno3, slos, spfj, sph2o, sphno3,                    &
 !$OMP               t, t300, tnd, wp, co2, y, ydot, za)
