@@ -9000,6 +9000,34 @@ asad_flux_defn('DEP',50492,'D',.FALSE.,0,1,                                    &
 ['          ','          ','          ','          '])                         &
 ]
 
+TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_hetero_rates(8) = [            &
+asad_flux_defn('RTE',50873,'H',.FALSE.,0,1,                                    &
+['ClONO2    ','H2O       '],                                                   &
+['HOCl      ','HONO2     ','          ','          ']),                        &
+asad_flux_defn('RTE',50874,'H',.FALSE.,0,1,                                    &
+['ClONO2    ','HCl       '],                                                   &
+['Cl        ','Cl        ','HONO2     ','          ']),                        &
+asad_flux_defn('RTE',50875,'H',.FALSE.,0,1,                                    &
+['HOCl      ','HCl       '],                                                   &
+['Cl        ','Cl        ','H2O       ','          ']),                        &
+asad_flux_defn('RTE',50876,'H',.FALSE.,0,1,                                    &
+['N2O5      ','H2O       '],                                                   &
+['HONO2     ','HONO2     ','          ','          ']),                        &
+asad_flux_defn('RTE',50877,'H',.FALSE.,0,1,                                    &
+['N2O5      ','HCl       '],                                                   &
+['Cl        ','NO2       ','HONO2     ','          ']),                        &
+asad_flux_defn('RTE',50878,'H',.FALSE.,0,1,                                    &
+['SO2       ','H2O2      '],                                                   &
+['NULL0     ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50879,'H',.FALSE.,0,1,                                    &
+['SO2       ','O3        '],                                                   &
+['NULL1     ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50880,'H',.FALSE.,0,1,                                    &
+['SO2       ','O3        '],                                                   &
+['NULL2     ','          ','          ','          '])                         &
+]
+
+
 
 PUBLIC :: asad_load_default_fluxes
 
@@ -9260,9 +9288,21 @@ IF (ukca_config%l_ukca_strattrop) THEN
     aa_ch4_ste = asad_ch4_ste
   END IF
   ! aa_ml
-  ALLOCATE(aa_ml(34 + 42))
+  ! TODO: Hook up rk rates
+  ! ALLOCATE(aa_ml(34 + 42 + 305))
+  ! aa_ml(1:34) = asad_wetdep_rates
+  ! aa_ml(35:76) = asad_drydep_rates
+  ! aa_ml(77:126) = asad_bimol_rates1
+  ! aa_ml(127:176) = asad_bimol_rates2
+  ! aa_ml(177:226) = asad_bimol_rates3
+  ! aa_ml(227:288) = asad_bimol_rates4
+  ! aa_ml(289:348) = asad_photol_rates
+  ! aa_ml(349:356) = asad_hetero_rates
+  ! aa_ml(357:381) = asad_termol_rates
+  ALLOCATE(aa_ml(34 + 42 + 8))
   aa_ml(1:34) = asad_wetdep_rates
   aa_ml(35:76) = asad_drydep_rates
+  aa_ml(77:84) = asad_hetero_rates
 
 ELSE IF (ukca_config%l_ukca_cristrat) THEN
   ! Select the asad diagnostics appropriate for CRI-Strat chemistry and
