@@ -2227,6 +2227,14 @@ IF (ukca_config%l_ukca_chem) THEN
          l_firstchem                                                           &
          )
 
+    ! ----------------------------------------------------------------------
+    ! Copy prognostics
+    ! ----------------------------------------------------------------------
+    ! Take a copy of tracer fields if requested for diagnostic purposes
+    IF (L_asad_use_chem_diags .AND. L_asad_use_output_tracer)                  &
+        CALL asad_output_tracer(row_length, rows, model_levels,                &
+                                n_chem_tracers, all_tracers, ierr)
+
     IF (ukca_config%l_ukca_offline_be) THEN
 
       ! Offline chemistry with explicit backward-Euler solver
@@ -2750,14 +2758,6 @@ END IF   ! ukca_config%l_ukca_mode
 ! ----------------------------------------------------------------------
 ! 5. Output prognostics and diagnostics
 ! ----------------------------------------------------------------------
-
-! ----------------------------------------------------------------------
-! 5.1 Copy prognostics
-! ----------------------------------------------------------------------
-! Take a copy of tracer fields if requested for diagnostic purposes
-IF (L_asad_use_chem_diags .AND. L_asad_use_output_tracer)                      &
-     CALL asad_output_tracer(row_length, rows, model_levels,                   &
-                             n_chem_tracers, all_tracers, ierr)
 
 ! ----------------------------------------------------------------------
 ! 5.2 Service diagnostic requests.
