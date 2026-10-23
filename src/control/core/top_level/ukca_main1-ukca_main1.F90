@@ -2454,6 +2454,16 @@ IF (ukca_config%l_ukca_chem) THEN
            )
     END IF
 
+    ! Copy ncsteps3d into STASH work array
+    section = UKCA_diag_sect
+    item = 9
+    CALL copydiag_3d(stashwork50(si(item,section,im_index):                    &
+            si_last(item,section,im_index)),                                   &
+            ncsteps3d(:,:,:),                                                  &
+            row_length, rows, model_levels,                                    &
+            stlist(:,stindex(1,item,section,im_index)), len_stlist,            &
+            stash_levels, num_stash_levels+1)
+
     ! ASAD post-processing
     IF (.NOT. ukca_config%l_ukca_offline_be) THEN
       CALL ukca_chemistry_cleanup(row_length, rows, model_levels,              &
