@@ -2227,6 +2227,11 @@ IF (ukca_config%l_ukca_chem) THEN
          l_firstchem                                                           &
          )
 
+    ! Output tracer concentrations *before* call to ukca_chemistry_ctl*
+    IF (L_asad_use_chem_diags .AND. L_asad_use_output_tracer)                  &
+        CALL asad_output_tracer(row_length, rows, model_levels,                &
+                                n_chem_tracers, all_tracers, ierr)
+
     IF (ukca_config%l_ukca_offline_be) THEN
 
       ! Offline chemistry with explicit backward-Euler solver
@@ -2453,6 +2458,16 @@ IF (ukca_config%l_ukca_chem) THEN
            ncsteps3d                                                           &
            )
     END IF
+
+    ! Copy ncsteps3d into STASH work array
+    section = UKCA_diag_sect
+    item = 9
+    CALL copydiag_3d(stashwork50(si(item,section,im_index):                    &
+            si_last(item,section,im_index)),                                   &
+            ncsteps3d(:,:,:),                                                  &
+            row_length, rows, model_levels,                                    &
+            stlist(:,stindex(1,item,section,im_index)), len_stlist,            &
+            stash_levels, num_stash_levels+1)
 
     ! ASAD post-processing
     IF (.NOT. ukca_config%l_ukca_offline_be) THEN
@@ -2740,14 +2755,6 @@ END IF   ! ukca_config%l_ukca_mode
 ! ----------------------------------------------------------------------
 ! 5. Output prognostics and diagnostics
 ! ----------------------------------------------------------------------
-
-! ----------------------------------------------------------------------
-! 5.1 Copy prognostics
-! ----------------------------------------------------------------------
-! Take a copy of tracer fields if requested for diagnostic purposes
-IF (L_asad_use_chem_diags .AND. L_asad_use_output_tracer)                      &
-     CALL asad_output_tracer(row_length, rows, model_levels,                   &
-                             n_chem_tracers, all_tracers, ierr)
 
 ! ----------------------------------------------------------------------
 ! 5.2 Service diagnostic requests.
