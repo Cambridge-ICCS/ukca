@@ -2469,6 +2469,15 @@ IF (ukca_config%l_ukca_chem) THEN
             stlist(:,stindex(1,item,section,im_index)), len_stlist,            &
             stash_levels, num_stash_levels+1)
 
+    ! Copy so4_sa into STASH work array
+    item = 407
+    CALL copydiag_3d(stashwork50(si(item,section,im_index):                    &
+            si_last(item,section,im_index)),                                   &
+            so4_sa(:,:,:),                                                     &
+            row_length, rows, model_levels,                                    &
+            stlist(:,stindex(1,item,section,im_index)), len_stlist,            &
+            stash_levels, num_stash_levels+1)
+
     ! ASAD post-processing
     IF (.NOT. ukca_config%l_ukca_offline_be) THEN
       CALL ukca_chemistry_cleanup(row_length, rows, model_levels,              &
