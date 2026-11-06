@@ -8771,7 +8771,7 @@ asad_flux_defn('DEP',50261,'W',.FALSE.,0,1,                                    &
 ['O3        ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
 asad_flux_defn('DEP',50262,'W',.FALSE.,0,1,                                    &
-['NO3          ','          '],                                                &
+['NO3       ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
 asad_flux_defn('DEP',50263,'W',.FALSE.,0,1,                                    &
 ['N2O5      ','          '],                                                   &
