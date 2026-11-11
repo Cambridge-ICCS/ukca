@@ -8766,6 +8766,111 @@ asad_flux_defn('DEP',50155,'W',.TRUE.,0,1,                                     &
 ['          ','          ','          ','          '])                         &
 ]
 
+TYPE(asad_flux_defn), PARAMETER, PUBLIC :: asad_wetdep_rates(34) = [           &
+asad_flux_defn('DEP',50261,'W',.FALSE.,0,1,                                    &
+['O3        ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50262,'W',.FALSE.,0,1,                                    &
+['NO3       ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50263,'W',.FALSE.,0,1,                                    &
+['N2O5      ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50264,'W',.FALSE.,0,1,                                    &
+['HO2NO2    ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50265,'W',.FALSE.,0,1,                                    &
+['HONO2     ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50266,'W',.FALSE.,0,1,                                    &
+['H2O2      ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50267,'W',.FALSE.,0,1,                                    &
+['HCHO      ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50268,'W',.FALSE.,0,1,                                    &
+['MeOO      ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50269,'W',.FALSE.,0,1,                                    &
+['MeOOH     ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50270,'W',.FALSE.,0,1,                                    &
+['HO2       ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50271,'W',.FALSE.,0,1,                                    &
+['BrONO2    ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50272,'W',.FALSE.,0,1,                                    &
+['HCl       ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50273,'W',.FALSE.,0,1,                                    &
+['HOCl      ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50274,'W',.FALSE.,0,1,                                    &
+['HBr       ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50275,'W',.FALSE.,0,1,                                    &
+['HOBr      ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50276,'W',.FALSE.,0,1,                                    &
+['ClONO2    ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50277,'W',.FALSE.,0,1,                                    &
+['HONO      ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50278,'W',.FALSE.,0,1,                                    &
+['EtOOH     ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50279,'W',.FALSE.,0,1,                                    &
+['n-PrOOH   ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50280,'W',.FALSE.,0,1,                                    &
+['i-PrOOH   ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50281,'W',.FALSE.,0,1,                                    &
+['MeCOCH2OOH','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50282,'W',.FALSE.,0,1,                                    &
+['ISOOH     ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50283,'W',.FALSE.,0,1,                                    &
+['ISON      ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50284,'W',.FALSE.,0,1,                                    &
+['MACROOH   ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50285,'W',.FALSE.,0,1,                                    &
+['HACET     ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50286,'W',.FALSE.,0,1,                                    &
+['MGLY      ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50287,'W',.FALSE.,0,1,                                    &
+['HCOOH     ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50288,'W',.FALSE.,0,1,                                    &
+['MeCO3H    ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50289,'W',.FALSE.,0,1,                                    &
+['MeCO2H    ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50290,'W',.FALSE.,0,1,                                    &
+['MeOH      ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50291,'W',.FALSE.,0,1,                                    &
+['SO2       ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50292,'W',.FALSE.,0,1,                                    &
+['DMSO      ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50293,'W',.FALSE.,0,1,                                    &
+['NH3       ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('DEP',50294,'W',.FALSE.,0,1,                                    &
+['Sec_Org   ','          '],                                                   &
+['          ','          ','          ','          '])                         &
+]
+
 TYPE(asad_flux_defn), PARAMETER, PUBLIC :: asad_drydep_rates(42) = [           &
 asad_flux_defn('DEP',50451,'D',.FALSE.,0,1,                                    &
 ['O3        ','          '],                                                   &
@@ -9155,8 +9260,9 @@ IF (ukca_config%l_ukca_strattrop) THEN
     aa_ch4_ste = asad_ch4_ste
   END IF
   ! aa_ml
-  ALLOCATE(aa_ml(42))
-  aa_ml(1:42) = asad_drydep_rates
+  ALLOCATE(aa_ml(34 + 42))
+  aa_ml(1:34) = asad_wetdep_rates
+  aa_ml(35:76) = asad_drydep_rates
 
 ELSE IF (ukca_config%l_ukca_cristrat) THEN
   ! Select the asad diagnostics appropriate for CRI-Strat chemistry and
