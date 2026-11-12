@@ -8999,8 +8999,6 @@ asad_flux_defn('DEP',50492,'D',.FALSE.,0,1,                                    &
 ['Sec_Org   ','          '],                                                   &
 ['          ','          ','          ','          '])                         &
 ]
->>>>>>> e4ai/training-data
-
 
 TYPE(asad_flux_defn), PARAMETER, PUBLIC :: asad_tracer_concentrations1(50) = [ &
 asad_flux_defn('OUT',50501,'X',.FALSE.,0,1,                                    &
