@@ -9001,7 +9001,7 @@ asad_flux_defn('DEP',50492,'D',.FALSE.,0,1,                                    &
 ]
 
 ! TODO: Put correct species names in place of 'X         '
-TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_rk_rates1(50) = [              &
+TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_pbk_rates1(50) = [             &
 asad_flux_defn('OUT',50601,'X',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
@@ -9154,7 +9154,8 @@ asad_flux_defn('OUT',50650,'X',.FALSE.,0,1,                                    &
 ['          ','          ','          ','          '])                         &
 ]
 
-TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_rk_rates2(50) = [              &
+! TODO: Put correct species names in place of 'X         '
+TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_pbk_rates2(50) = [             &
 asad_flux_defn('OUT',50651,'X',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
@@ -9307,7 +9308,8 @@ asad_flux_defn('OUT',50700,'X',.FALSE.,0,1,                                    &
 ['          ','          ','          ','          '])                         &
 ]
 
-TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_rk_rates3(50) = [              &
+! TODO: Put correct species names in place of 'X         '
+TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_pbk_rates3(50) = [             &
 asad_flux_defn('OUT',50701,'X',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
@@ -9460,7 +9462,8 @@ asad_flux_defn('OUT',50750,'X',.FALSE.,0,1,                                    &
 ['          ','          ','          ','          '])                         &
 ]
 
-TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_rk_rates4(50) = [              &
+! TODO: Put correct species names in place of 'X         '
+TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_pbk_rates4(62) = [             &
 asad_flux_defn('OUT',50751,'X',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
@@ -9610,10 +9613,7 @@ asad_flux_defn('OUT',50799,'X',.FALSE.,0,1,                                    &
 ['          ','          ','          ','          ']),                        &
 asad_flux_defn('OUT',50800,'X',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
-['          ','          ','          ','          '])                         &
-]
-
-TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_rk_rates5(50) = [              &
+['          ','          ','          ','          ']),                        &
 asad_flux_defn('OUT',50801,'X',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
@@ -9649,190 +9649,195 @@ asad_flux_defn('OUT',50811,'X',.FALSE.,0,1,                                    &
 ['          ','          ','          ','          ']),                        &
 asad_flux_defn('OUT',50812,'X',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50813,'X',.FALSE.,0,1,                                    &
+['          ','          ','          ','          '])                         &
+]
+
+! TODO: Put correct species names in place of 'X         '
+TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_photol_rates(60) = [           &
+asad_flux_defn('OUT',50813,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50814,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50814,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50815,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50815,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50816,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50816,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50817,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50817,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50818,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50818,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50819,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50819,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50820,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50820,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50821,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50821,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50822,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50822,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50823,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50823,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50824,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50824,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50825,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50825,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50826,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50826,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50827,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50827,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50828,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50828,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50829,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50829,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50830,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50830,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50831,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50831,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50832,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50832,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50833,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50833,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50834,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50834,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50835,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50835,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50836,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50836,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50837,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50837,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50838,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50838,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50839,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50839,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50840,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50840,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50841,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50841,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50842,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50842,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50843,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50843,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50844,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50844,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50845,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50845,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50846,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50846,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50847,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50847,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50848,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50848,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50849,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50849,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50850,'X',.FALSE.,0,1,                                    &
+asad_flux_defn('OUT',50850,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50851,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50852,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50853,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50854,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50855,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50856,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50857,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50858,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50859,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50860,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50861,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50862,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50863,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50864,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50865,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50866,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50867,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50868,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50869,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50870,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50871,'J',.FALSE.,0,1,                                    &
+['X         ','          '],                                                   &
+['          ','          ','          ','          ']),                        &
+asad_flux_defn('OUT',50872,'J',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          '])                         &
 ]
 
-TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_rk_rates6(55) = [              &
-asad_flux_defn('OUT',50851,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50852,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50853,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50854,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50855,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50856,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50857,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50858,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50859,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50860,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50861,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50862,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50863,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50864,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50865,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50866,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50867,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50868,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50869,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50870,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50871,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
-asad_flux_defn('OUT',50872,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
+! TODO: Put correct species names in place of 'X         '
+TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_phk_rates(8) = [               &
 asad_flux_defn('OUT',50873,'X',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
@@ -9856,7 +9861,11 @@ asad_flux_defn('OUT',50879,'X',.FALSE.,0,1,                                    &
 ['          ','          ','          ','          ']),                        &
 asad_flux_defn('OUT',50880,'X',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
+['          ','          ','          ','          '])                         &
+]
+
+! TODO: Put correct species names in place of 'X         '
+TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_ptk_rates(25) = [              &
 asad_flux_defn('OUT',50881,'X',.FALSE.,0,1,                                    &
 ['X         ','          '],                                                   &
 ['          ','          ','          ','          ']),                        &
@@ -10199,20 +10208,22 @@ IF (ukca_config%l_ukca_strattrop) THEN
   ! ALLOCATE(aa_ml(34 + 42 + 305))
   ! aa_ml(1:34) = asad_wetdep_rates
   ! aa_ml(35:76) = asad_drydep_rates
-  ! aa_ml(77:126) = asad_rk_rates1
-  ! aa_ml(127:176) = asad_rk_rates2
-  ! aa_ml(177:226) = asad_rk_rates3
-  ! aa_ml(227:276) = asad_rk_rates4
-  ! aa_ml(277:326) = asad_rk_rates5
-  ! aa_ml(327:381) = asad_rk_rates6
+  ! aa_ml(77:126) = asad_pbk_rates1
+  ! aa_ml(127:176) = asad_pbk_rates2
+  ! aa_ml(177:226) = asad_pbk_rates3
+  ! aa_ml(227:288) = asad_pbk_rates4
+  ! aa_ml(289:348) = asad_photol_rates
+  ! aa_ml(349:356) = asad_phk_rates
+  ! aa_ml(357:381) = asad_ptk_rates
   ALLOCATE(aa_ml(42 + 305))
   aa_ml(1:42) = asad_drydep_rates
-  aa_ml(43:92) = asad_rk_rates1
-  aa_ml(93:142) = asad_rk_rates2
-  aa_ml(143:192) = asad_rk_rates3
-  aa_ml(193:242) = asad_rk_rates4
-  aa_ml(243:292) = asad_rk_rates5
-  aa_ml(293:347) = asad_rk_rates6
+  aa_ml(43:92) = asad_pbk_rates1
+  aa_ml(93:142) = asad_pbk_rates2
+  aa_ml(143:192) = asad_pbk_rates3
+  aa_ml(193:254) = asad_pbk_rates4
+  aa_ml(255:314) = asad_photol_rates
+  aa_ml(315:322) = asad_phk_rates
+  aa_ml(323:347) = asad_ptk_rates
 
 ELSE IF (ukca_config%l_ukca_cristrat) THEN
   ! Select the asad diagnostics appropriate for CRI-Strat chemistry and
