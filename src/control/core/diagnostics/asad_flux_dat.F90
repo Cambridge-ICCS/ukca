@@ -9836,32 +9836,31 @@ asad_flux_defn('OUT',50872,'J',.FALSE.,0,1,                                    &
 ['          ','          ','          ','          '])                         &
 ]
 
-! TODO: Put correct species names in place of 'X         '
 TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_phk_rates(8) = [               &
 asad_flux_defn('OUT',50873,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
+['ClONO2    ','H2O       '],                                                   &
+['HOCl      ','HONO2     ','          ','          ']),                        &
 asad_flux_defn('OUT',50874,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
+['ClONO2    ','HCl       '],                                                   &
+['Cl        ','Cl        ','HONO2     ','          ']),                        &
 asad_flux_defn('OUT',50875,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
+['HOCl      ','HCl       '],                                                   &
+['Cl        ','Cl        ','H2O       ','          ']),                        &
 asad_flux_defn('OUT',50876,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
+['N2O5      ','H2O       '],                                                   &
+['HONO2     ','HONO2     ','          ','          ']),                        &
 asad_flux_defn('OUT',50877,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
+['N2O5      ','HCl       '],                                                   &
+['Cl        ','NO2       ','HONO2     ','          ']),                        &
 asad_flux_defn('OUT',50878,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
+['SO2       ','H2O2      '],                                                   &
+['NULL0     ','          ','          ','          ']),                        &
 asad_flux_defn('OUT',50879,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          ']),                        &
+['SO2       ','O3        '],                                                   &
+['NULL1     ','          ','          ','          ']),                        &
 asad_flux_defn('OUT',50880,'X',.FALSE.,0,1,                                    &
-['X         ','          '],                                                   &
-['          ','          ','          ','          '])                         &
+['SO2       ','O3        '],                                                   &
+['NULL2     ','          ','          ','          '])                         &
 ]
 
 ! TODO: Put correct species names in place of 'X         '
@@ -10215,15 +10214,19 @@ IF (ukca_config%l_ukca_strattrop) THEN
   ! aa_ml(289:348) = asad_photol_rates
   ! aa_ml(349:356) = asad_phk_rates
   ! aa_ml(357:381) = asad_ptk_rates
-  ALLOCATE(aa_ml(42 + 305))
+  ! TODO: Hook up rk rates
+  ! ALLOCATE(aa_ml(42 + 305))
+  ! aa_ml(1:42) = asad_drydep_rates
+  ! aa_ml(43:92) = asad_pbk_rates1
+  ! aa_ml(93:142) = asad_pbk_rates2
+  ! aa_ml(143:192) = asad_pbk_rates3
+  ! aa_ml(193:254) = asad_pbk_rates4
+  ! aa_ml(255:314) = asad_photol_rates
+  ! aa_ml(315:322) = asad_phk_rates
+  ! aa_ml(323:347) = asad_ptk_rates
+  ALLOCATE(aa_ml(42 + 8))
   aa_ml(1:42) = asad_drydep_rates
-  aa_ml(43:92) = asad_pbk_rates1
-  aa_ml(93:142) = asad_pbk_rates2
-  aa_ml(143:192) = asad_pbk_rates3
-  aa_ml(193:254) = asad_pbk_rates4
-  aa_ml(255:314) = asad_photol_rates
-  aa_ml(315:322) = asad_phk_rates
-  aa_ml(323:347) = asad_ptk_rates
+  aa_ml(43:50) = asad_phk_rates
 
 ELSE IF (ukca_config%l_ukca_cristrat) THEN
   ! Select the asad diagnostics appropriate for CRI-Strat chemistry and
