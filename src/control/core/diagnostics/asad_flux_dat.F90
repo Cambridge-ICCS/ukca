@@ -9260,12 +9260,9 @@ IF (ukca_config%l_ukca_strattrop) THEN
     aa_ch4_ste = asad_ch4_ste
   END IF
   ! aa_ml
-  ! FIXME: Hook up wet dep rates
-  ! ALLOCATE(aa_ml(34 + 42))
-  ! aa_ml(1:34) = asad_wetdep_rates
-  ! aa_ml(35:76) = asad_drydep_rates
-  ALLOCATE(aa_ml(42))
-  aa_ml(1:42) = asad_drydep_rates
+  ALLOCATE(aa_ml(34 + 42))
+  aa_ml(1:34) = asad_wetdep_rates
+  aa_ml(35:76) = asad_drydep_rates
 
 ELSE IF (ukca_config%l_ukca_cristrat) THEN
   ! Select the asad diagnostics appropriate for CRI-Strat chemistry and
