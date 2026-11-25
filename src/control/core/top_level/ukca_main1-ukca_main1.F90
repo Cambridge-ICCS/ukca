@@ -2230,7 +2230,8 @@ IF (ukca_config%l_ukca_chem) THEN
     ! Output tracer concentrations *before* call to ukca_chemistry_ctl*
     IF (L_asad_use_chem_diags .AND. L_asad_use_output_tracer)                  &
         CALL asad_output_tracer(row_length, rows, model_levels,                &
-                                n_chem_tracers, all_tracers, ierr)
+                                n_chem_tracers + 87, all_tracers, ierr)
+                                ! TODO: What's the right thing to do here?
 
     IF (ukca_config%l_ukca_offline_be) THEN
 
