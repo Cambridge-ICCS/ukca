@@ -9000,6 +9000,189 @@ asad_flux_defn('DEP',50492,'D',.FALSE.,0,1,                                    &
 ['          ','          ','          ','          '])                         &
 ]
 
+TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_photol_rates(60) = [           &
+asad_flux_defn('RTE',50813,'J',.FALSE.,0,5,                                    &
+['EtOOH     ','PHOTON    '],                                                   &
+['MeCHO     ','HO2       ','OH        ','          ']),                        &
+asad_flux_defn('RTE',50814,'J',.FALSE.,0,4,                                    &
+['H2O2      ','PHOTON    '],                                                   &
+['OH        ','OH        ','          ','          ']),                        &
+asad_flux_defn('RTE',50815,'J',.FALSE.,0,5,                                    &
+['HCHO      ','PHOTON    '],                                                   &
+['HO2       ','HO2       ','CO        ','          ']),                        &
+asad_flux_defn('RTE',50816,'J',.FALSE.,0,4,                                    &
+['HCHO      ','PHOTON    '],                                                   &
+['H2        ','CO        ','          ','          ']),                        &
+asad_flux_defn('RTE',50817,'J',.FALSE.,0,4,                                    &
+['HO2NO2    ','PHOTON    '],                                                   &
+['HO2       ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50818,'J',.FALSE.,0,4,                                    &
+['HONO2     ','PHOTON    '],                                                   &
+['OH        ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50819,'J',.FALSE.,0,5,                                    &
+['MeCHO     ','PHOTON    '],                                                   &
+['MeOO      ','HO2       ','CO        ','          ']),                        &
+asad_flux_defn('RTE',50820,'J',.FALSE.,0,4,                                    &
+['MeCHO     ','PHOTON    '],                                                   &
+['CH4       ','CO        ','          ','          ']),                        &
+asad_flux_defn('RTE',50821,'J',.FALSE.,0,5,                                    &
+['MeOOH     ','PHOTON    '],                                                   &
+['HO2       ','HCHO      ','OH        ','          ']),                        &
+asad_flux_defn('RTE',50822,'J',.FALSE.,0,4,                                    &
+['N2O5      ','PHOTON    '],                                                   &
+['NO3       ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50823,'J',.FALSE.,0,4,                                    &
+['NO2       ','PHOTON    '],                                                   &
+['NO        ','O(3P)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50824,'J',.FALSE.,0,4,                                    &
+['NO3       ','PHOTON    '],                                                   &
+['NO        ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50825,'J',.FALSE.,0,4,                                    &
+['NO3       ','PHOTON    '],                                                   &
+['NO2       ','O(3P)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50826,'J',.FALSE.,0,4,                                    &
+['O2        ','PHOTON    '],                                                   &
+['O(3P)     ','O(3P)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50827,'J',.FALSE.,0,4,                                    &
+['O3        ','PHOTON    '],                                                   &
+['O2        ','O(1D)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50828,'J',.FALSE.,0,4,                                    &
+['O3        ','PHOTON    '],                                                   &
+['O2        ','O(3P)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50829,'J',.FALSE.,0,4,                                    &
+['PAN       ','PHOTON    '],                                                   &
+['MeCO3     ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50830,'J',.FALSE.,0,4,                                    &
+['HONO      ','PHOTON    '],                                                   &
+['OH        ','NO        ','          ','          ']),                        &
+asad_flux_defn('RTE',50831,'J',.FALSE.,0,5,                                    &
+['EtCHO     ','PHOTON    '],                                                   &
+['EtOO      ','HO2       ','CO        ','          ']),                        &
+asad_flux_defn('RTE',50832,'J',.FALSE.,0,4,                                    &
+['Me2CO     ','PHOTON    '],                                                   &
+['MeCO3     ','MeOO      ','          ','          ']),                        &
+asad_flux_defn('RTE',50833,'J',.FALSE.,0,5,                                    &
+['n-PrOOH   ','PHOTON    '],                                                   &
+['EtCHO     ','HO2       ','OH        ','          ']),                        &
+asad_flux_defn('RTE',50834,'J',.FALSE.,0,5,                                    &
+['i-PrOOH   ','PHOTON    '],                                                   &
+['Me2CO     ','HO2       ','OH        ','          ']),                        &
+asad_flux_defn('RTE',50835,'J',.FALSE.,0,5,                                    &
+['MeCOCH2OOH','PHOTON    '],                                                   &
+['MeCO3     ','HCHO      ','OH        ','          ']),                        &
+asad_flux_defn('RTE',50836,'J',.FALSE.,0,4,                                    &
+['PPAN      ','PHOTON    '],                                                   &
+['EtCO3     ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50837,'J',.FALSE.,0,5,                                    &
+['MeONO2    ','PHOTON    '],                                                   &
+['HO2       ','HCHO      ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50838,'J',.FALSE.,0,6,                                    &
+['ISOOH     ','PHOTON    '],                                                   &
+['OH        ','MACR      ','HCHO      ','HO2       ']),                        &
+asad_flux_defn('RTE',50839,'J',.FALSE.,0,6,                                    &
+['ISON      ','PHOTON    '],                                                   &
+['NO2       ','MACR      ','HCHO      ','HO2       ']),                        &
+asad_flux_defn('RTE',50840,'J',.FALSE.,0,6,                                    &
+['MACR      ','PHOTON    '],                                                   &
+['MeCO3     ','HCHO      ','CO        ','HO2       ']),                        &
+asad_flux_defn('RTE',50841,'J',.FALSE.,0,4,                                    &
+['MPAN      ','PHOTON    '],                                                   &
+['MACRO2    ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50842,'J',.FALSE.,0,6,                                    &
+['MACROOH   ','PHOTON    '],                                                   &
+['OH        ','HO2       ','OH        ','HO2       ']),                        &
+asad_flux_defn('RTE',50843,'J',.FALSE.,0,6,                                    &
+['MACROOH   ','PHOTON    '],                                                   &
+['HACET     ','CO        ','MGLY      ','HCHO      ']),                        &
+asad_flux_defn('RTE',50844,'J',.FALSE.,0,5,                                    &
+['HACET     ','PHOTON    '],                                                   &
+['MeCO3     ','HCHO      ','HO2       ','          ']),                        &
+asad_flux_defn('RTE',50845,'J',.FALSE.,0,5,                                    &
+['MGLY      ','PHOTON    '],                                                   &
+['MeCO3     ','CO        ','HO2       ','          ']),                        &
+asad_flux_defn('RTE',50846,'J',.FALSE.,0,6,                                    &
+['NALD      ','PHOTON    '],                                                   &
+['HCHO      ','CO        ','NO2       ','HO2       ']),                        &
+asad_flux_defn('RTE',50847,'J',.FALSE.,0,4,                                    &
+['MeCO3H    ','PHOTON    '],                                                   &
+['MeOO      ','OH        ','          ','          ']),                        &
+asad_flux_defn('RTE',50848,'J',.FALSE.,0,4,                                    &
+['BrCl      ','PHOTON    '],                                                   &
+['Br        ','Cl        ','          ','          ']),                        &
+asad_flux_defn('RTE',50849,'J',.FALSE.,0,4,                                    &
+['BrO       ','PHOTON    '],                                                   &
+['Br        ','O(3P)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50850,'J',.FALSE.,0,4,                                    &
+['BrONO2    ','PHOTON    '],                                                   &
+['Br        ','NO3       ','          ','          ']),                        &
+asad_flux_defn('RTE',50851,'J',.FALSE.,0,4,                                    &
+['BrONO2    ','PHOTON    '],                                                   &
+['BrO       ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50852,'J',.FALSE.,0,4,                                    &
+['O2        ','PHOTON    '],                                                   &
+['O(3P)     ','O(1D)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50853,'J',.FALSE.,0,4,                                    &
+['OClO      ','PHOTON    '],                                                   &
+['O(3P)     ','ClO       ','          ','          ']),                        &
+asad_flux_defn('RTE',50854,'J',.FALSE.,0,4,                                    &
+['NO        ','PHOTON    '],                                                   &
+['N         ','O(3P)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50855,'J',.FALSE.,0,4,                                    &
+['HOBr      ','PHOTON    '],                                                   &
+['OH        ','Br        ','          ','          ']),                        &
+asad_flux_defn('RTE',50856,'J',.FALSE.,0,4,                                    &
+['N2O       ','PHOTON    '],                                                   &
+['N2        ','O(1D)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50857,'J',.FALSE.,0,4,                                    &
+['H2O       ','PHOTON    '],                                                   &
+['OH        ','H         ','          ','          ']),                        &
+asad_flux_defn('RTE',50858,'J',.FALSE.,0,4,                                    &
+['ClONO2    ','PHOTON    '],                                                   &
+['Cl        ','NO3       ','          ','          ']),                        &
+asad_flux_defn('RTE',50859,'J',.FALSE.,0,4,                                    &
+['ClONO2    ','PHOTON    '],                                                   &
+['ClO       ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50860,'J',.FALSE.,0,4,                                    &
+['HCl       ','PHOTON    '],                                                   &
+['H         ','Cl        ','          ','          ']),                        &
+asad_flux_defn('RTE',50861,'J',.FALSE.,0,4,                                    &
+['HOCl      ','PHOTON    '],                                                   &
+['OH        ','Cl        ','          ','          ']),                        &
+asad_flux_defn('RTE',50862,'J',.FALSE.,0,5,                                    &
+['Cl2O2     ','PHOTON    '],                                                   &
+['Cl        ','Cl        ','O2        ','          ']),                        &
+asad_flux_defn('RTE',50863,'J',.FALSE.,0,5,                                    &
+['CFCl3     ','PHOTON    '],                                                   &
+['Cl        ','Cl        ','Cl        ','          ']),                        &
+asad_flux_defn('RTE',50864,'J',.FALSE.,0,4,                                    &
+['CF2Cl2    ','PHOTON    '],                                                   &
+['Cl        ','Cl        ','          ','          ']),                        &
+asad_flux_defn('RTE',50865,'J',.FALSE.,0,4,                                    &
+['MeBr      ','PHOTON    '],                                                   &
+['Br        ','H         ','          ','          ']),                        &
+asad_flux_defn('RTE',50866,'J',.FALSE.,0,4,                                    &
+['CH4       ','PHOTON    '],                                                   &
+['MeOO      ','H         ','          ','          ']),                        &
+asad_flux_defn('RTE',50867,'J',.FALSE.,0,4,                                    &
+['CO2       ','PHOTON    '],                                                   &
+['CO        ','O(3P)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50868,'J',.FALSE.,0,4,                                    &
+['HO2NO2    ','PHOTON    '],                                                   &
+['OH        ','NO3       ','          ','          ']),                        &
+asad_flux_defn('RTE',50869,'J',.FALSE.,0,4,                                    &
+['CS2       ','PHOTON    '],                                                   &
+['COS       ','SO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50870,'J',.FALSE.,0,4,                                    &
+['COS       ','PHOTON    '],                                                   &
+['CO        ','SO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50871,'J',.FALSE.,0,4,                                    &
+['H2SO4     ','PHOTON    '],                                                   &
+['SO3       ','OH        ','          ','          ']),                        &
+asad_flux_defn('RTE',50872,'J',.FALSE.,0,4,                                    &
+['SO3       ','PHOTON    '],                                                   &
+['SO2       ','O(3P)     ','          ','          '])                         &
+]
+
 TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_hetero_rates(8) = [            &
 asad_flux_defn('RTE',50873,'H',.FALSE.,0,4,                                    &
 ['ClONO2    ','H2O       '],                                                   &
@@ -9366,7 +9549,7 @@ IF (ukca_config%l_ukca_strattrop) THEN
     aa_ch4_ste = asad_ch4_ste
   END IF
   ! aa_ml
-  ! TODO: Hook up rk rates
+  ! TODO: Hook up bimol rates
   ! ALLOCATE(aa_ml(34 + 42 + 305))
   ! aa_ml(1:34) = asad_wetdep_rates
   ! aa_ml(35:76) = asad_drydep_rates
@@ -9377,11 +9560,12 @@ IF (ukca_config%l_ukca_strattrop) THEN
   ! aa_ml(289:348) = asad_photol_rates
   ! aa_ml(349:356) = asad_hetero_rates
   ! aa_ml(357:381) = asad_termol_rates
-  ALLOCATE(aa_ml(34 + 42 + 8 + 25))
+  ALLOCATE(aa_ml(34 + 42 + 60 + 8 + 25))
   aa_ml(1:34) = asad_wetdep_rates
   aa_ml(35:76) = asad_drydep_rates
-  aa_ml(77:84) = asad_hetero_rates
-  aa_ml(85:109) = asad_termol_rates
+  aa_ml(77:136) = asad_photol_rates
+  aa_ml(137:144) = asad_hetero_rates
+  aa_ml(145:169) = asad_termol_rates
 
 ELSE IF (ukca_config%l_ukca_cristrat) THEN
   ! Select the asad diagnostics appropriate for CRI-Strat chemistry and
