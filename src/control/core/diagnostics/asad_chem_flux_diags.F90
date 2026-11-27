@@ -1050,12 +1050,12 @@ DO l=1,n_chemdiags
         IF (asad_chemdiags(l)%num_products < 10) THEN
           WRITE(outformat,FMT='(A28,I1,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         ELSE
           WRITE(outformat,FMT='(A28,I2,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         END IF
         WRITE(umMessage,'(A)') outformat
@@ -1086,12 +1086,12 @@ DO l=1,n_chemdiags
         IF (asad_chemdiags(l)%num_products < 10) THEN
           WRITE(outformat,FMT='(A28,I1,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         ELSE
           WRITE(outformat,FMT='(A28,I2,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         END IF
         WRITE(cmessage,FMT=TRIM(ADJUSTL(outformat)))                           &
@@ -1117,12 +1117,12 @@ DO l=1,n_chemdiags
         IF (asad_chemdiags(l)%num_products < 10) THEN
           WRITE(outformat,FMT='(A28,I1,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         ELSE
           WRITE(outformat,FMT='(A28,I2,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         END IF
         WRITE(cmessage,FMT=TRIM(ADJUSTL(outformat)))                           &
@@ -1151,12 +1151,12 @@ DO l=1,n_chemdiags
         IF (asad_chemdiags(l)%num_products < 10) THEN
           WRITE(outformat,FMT='(A28,I1,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         ELSE
           WRITE(outformat,FMT='(A28,I2,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         END IF
         WRITE(cmessage,FMT=TRIM(ADJUSTL(outformat)))                           &
