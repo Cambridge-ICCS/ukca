@@ -9000,6 +9000,654 @@ asad_flux_defn('DEP',50492,'D',.FALSE.,0,1,                                    &
 ['          ','          ','          ','          '])                         &
 ]
 
+TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_bimol_rates1(50) = [           &
+asad_flux_defn('RTE',50601,'B',.FALSE.,0,5,                                    &
+['Br        ','Cl2O2     '],                                                   &
+['BrCl      ','Cl        ','O2        ','          ']),                        &
+asad_flux_defn('RTE',50602,'B',.FALSE.,0,5,                                    &
+['Br        ','HCHO      '],                                                   &
+['HBr       ','CO        ','HO2       ','          ']),                        &
+asad_flux_defn('RTE',50603,'B',.FALSE.,0,4,                                    &
+['Br        ','HO2       '],                                                   &
+['HBr       ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50604,'B',.FALSE.,0,4,                                    &
+['Br        ','O3        '],                                                   &
+['BrO       ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50605,'B',.FALSE.,0,4,                                    &
+['Br        ','OClO      '],                                                   &
+['BrO       ','ClO       ','          ','          ']),                        &
+asad_flux_defn('RTE',50606,'B',.FALSE.,0,5,                                    &
+['BrO       ','BrO       '],                                                   &
+['Br        ','Br        ','O2        ','          ']),                        &
+asad_flux_defn('RTE',50607,'B',.FALSE.,0,5,                                    &
+['BrO       ','ClO       '],                                                   &
+['Br        ','Cl        ','O2        ','          ']),                        &
+asad_flux_defn('RTE',50608,'B',.FALSE.,0,4,                                    &
+['BrO       ','ClO       '],                                                   &
+['Br        ','OClO      ','          ','          ']),                        &
+asad_flux_defn('RTE',50609,'B',.FALSE.,0,4,                                    &
+['BrO       ','ClO       '],                                                   &
+['BrCl      ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50610,'B',.FALSE.,0,4,                                    &
+['BrO       ','HO2       '],                                                   &
+['HBr       ','O3        ','          ','          ']),                        &
+asad_flux_defn('RTE',50611,'B',.FALSE.,0,4,                                    &
+['BrO       ','HO2       '],                                                   &
+['HOBr      ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50612,'B',.FALSE.,0,4,                                    &
+['BrO       ','NO        '],                                                   &
+['Br        ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50613,'B',.FALSE.,0,4,                                    &
+['BrO       ','OH        '],                                                   &
+['Br        ','HO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50614,'B',.FALSE.,0,4,                                    &
+['CF2Cl2    ','O(1D)     '],                                                   &
+['Cl        ','ClO       ','          ','          ']),                        &
+asad_flux_defn('RTE',50615,'B',.FALSE.,0,5,                                    &
+['CFCl3     ','O(1D)     '],                                                   &
+['Cl        ','Cl        ','ClO       ','          ']),                        &
+asad_flux_defn('RTE',50616,'B',.FALSE.,0,4,                                    &
+['Cl        ','CH4       '],                                                   &
+['HCl       ','MeOO      ','          ','          ']),                        &
+asad_flux_defn('RTE',50617,'B',.FALSE.,0,5,                                    &
+['Cl        ','Cl2O2     '],                                                   &
+['Cl        ','Cl        ','Cl        ','          ']),                        &
+asad_flux_defn('RTE',50618,'B',.FALSE.,0,5,                                    &
+['Cl        ','ClONO2    '],                                                   &
+['Cl        ','Cl        ','NO3       ','          ']),                        &
+asad_flux_defn('RTE',50619,'B',.FALSE.,0,4,                                    &
+['Cl        ','H2        '],                                                   &
+['HCl       ','H         ','          ','          ']),                        &
+asad_flux_defn('RTE',50620,'B',.FALSE.,0,4,                                    &
+['Cl        ','H2O2      '],                                                   &
+['HCl       ','HO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50621,'B',.FALSE.,0,5,                                    &
+['Cl        ','HCHO      '],                                                   &
+['HCl       ','CO        ','HO2       ','          ']),                        &
+asad_flux_defn('RTE',50622,'B',.FALSE.,0,4,                                    &
+['Cl        ','HO2       '],                                                   &
+['ClO       ','OH        ','          ','          ']),                        &
+asad_flux_defn('RTE',50623,'B',.FALSE.,0,4,                                    &
+['Cl        ','HO2       '],                                                   &
+['HCl       ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50624,'B',.FALSE.,0,5,                                    &
+['Cl        ','HOCl      '],                                                   &
+['Cl        ','Cl        ','OH        ','          ']),                        &
+asad_flux_defn('RTE',50625,'B',.FALSE.,0,4,                                    &
+['Cl        ','MeOOH     '],                                                   &
+['HCl       ','MeOO      ','          ','          ']),                        &
+asad_flux_defn('RTE',50626,'B',.FALSE.,0,4,                                    &
+['Cl        ','NO3       '],                                                   &
+['ClO       ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50627,'B',.FALSE.,0,4,                                    &
+['Cl        ','O3        '],                                                   &
+['ClO       ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50628,'B',.FALSE.,0,4,                                    &
+['Cl        ','OClO      '],                                                   &
+['ClO       ','ClO       ','          ','          ']),                        &
+asad_flux_defn('RTE',50629,'B',.FALSE.,0,5,                                    &
+['ClO       ','ClO       '],                                                   &
+['Cl        ','Cl        ','O2        ','          ']),                        &
+asad_flux_defn('RTE',50630,'B',.FALSE.,0,5,                                    &
+['ClO       ','ClO       '],                                                   &
+['Cl        ','Cl        ','O2        ','          ']),                        &
+asad_flux_defn('RTE',50631,'B',.FALSE.,0,4,                                    &
+['ClO       ','ClO       '],                                                   &
+['Cl        ','OClO      ','          ','          ']),                        &
+asad_flux_defn('RTE',50632,'B',.FALSE.,0,4,                                    &
+['ClO       ','HO2       '],                                                   &
+['HCl       ','O3        ','          ','          ']),                        &
+asad_flux_defn('RTE',50633,'B',.FALSE.,0,4,                                    &
+['ClO       ','HO2       '],                                                   &
+['HOCl      ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50634,'B',.FALSE.,0,5,                                    &
+['ClO       ','MeOO      '],                                                   &
+['Cl        ','HCHO      ','HO2       ','          ']),                        &
+asad_flux_defn('RTE',50635,'B',.FALSE.,0,4,                                    &
+['ClO       ','NO        '],                                                   &
+['Cl        ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50636,'B',.FALSE.,0,5,                                    &
+['ClO       ','NO3       '],                                                   &
+['Cl        ','O2        ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50637,'B',.FALSE.,0,4,                                    &
+['ClO       ','NO3       '],                                                   &
+['OClO      ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50638,'B',.FALSE.,0,5,                                    &
+['EtCO3     ','NO        '],                                                   &
+['EtOO      ','CO2       ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50639,'B',.FALSE.,0,5,                                    &
+['EtCO3     ','NO3       '],                                                   &
+['EtOO      ','CO2       ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50640,'B',.FALSE.,0,5,                                    &
+['EtOO      ','MeCO3     '],                                                   &
+['MeCHO     ','HO2       ','MeOO      ','          ']),                        &
+asad_flux_defn('RTE',50641,'B',.FALSE.,0,5,                                    &
+['EtOO      ','NO        '],                                                   &
+['MeCHO     ','HO2       ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50642,'B',.FALSE.,0,5,                                    &
+['EtOO      ','NO3       '],                                                   &
+['MeCHO     ','HO2       ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50643,'B',.FALSE.,0,4,                                    &
+['H         ','HO2       '],                                                   &
+['H2        ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50644,'B',.FALSE.,0,4,                                    &
+['H         ','HO2       '],                                                   &
+['O(3P)     ','H2O       ','          ','          ']),                        &
+asad_flux_defn('RTE',50645,'B',.FALSE.,0,4,                                    &
+['H         ','HO2       '],                                                   &
+['OH        ','OH        ','          ','          ']),                        &
+asad_flux_defn('RTE',50646,'B',.FALSE.,0,4,                                    &
+['H         ','NO2       '],                                                   &
+['OH        ','NO        ','          ','          ']),                        &
+asad_flux_defn('RTE',50647,'B',.FALSE.,0,4,                                    &
+['H         ','O3        '],                                                   &
+['OH        ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50648,'B',.FALSE.,0,4,                                    &
+['HO2       ','EtCO3     '],                                                   &
+['O2        ','EtCO3H    ','          ','          ']),                        &
+asad_flux_defn('RTE',50649,'B',.FALSE.,0,4,                                    &
+['HO2       ','EtCO3     '],                                                   &
+['O3        ','EtCO2H    ','          ','          ']),                        &
+asad_flux_defn('RTE',50650,'B',.FALSE.,0,3,                                    &
+['HO2       ','EtOO      '],                                                   &
+['EtOOH     ','          ','          ','          '])                         &
+]
+
+TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_bimol_rates2(50) = [           &
+asad_flux_defn('RTE',50651,'B',.FALSE.,0,3,                                    &
+['HO2       ','HO2       '],                                                   &
+['H2O2      ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50652,'B',.FALSE.,0,3,                                    &
+['HO2       ','ISO2      '],                                                   &
+['ISOOH     ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50653,'B',.FALSE.,0,3,                                    &
+['HO2       ','MACRO2    '],                                                   &
+['MACROOH   ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50654,'B',.FALSE.,0,4,                                    &
+['HO2       ','MeCO3     '],                                                   &
+['MeCO2H    ','O3        ','          ','          ']),                        &
+asad_flux_defn('RTE',50655,'B',.FALSE.,0,3,                                    &
+['HO2       ','MeCO3     '],                                                   &
+['MeCO3H    ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50656,'B',.FALSE.,0,4,                                    &
+['HO2       ','MeCO3     '],                                                   &
+['OH        ','MeOO      ','          ','          ']),                        &
+asad_flux_defn('RTE',50657,'B',.FALSE.,0,3,                                    &
+['HO2       ','MeCOCH2OO '],                                                   &
+['MeCOCH2OOH','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50658,'B',.FALSE.,0,3,                                    &
+['HO2       ','MeOO      '],                                                   &
+['HCHO      ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50659,'B',.FALSE.,0,3,                                    &
+['HO2       ','MeOO      '],                                                   &
+['MeOOH     ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50660,'B',.FALSE.,0,4,                                    &
+['HO2       ','NO        '],                                                   &
+['OH        ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50661,'B',.FALSE.,0,4,                                    &
+['HO2       ','NO3       '],                                                   &
+['OH        ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50662,'B',.FALSE.,0,4,                                    &
+['HO2       ','O3        '],                                                   &
+['OH        ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50663,'B',.FALSE.,0,3,                                    &
+['HO2       ','i-PrOO    '],                                                   &
+['i-PrOOH   ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50664,'B',.FALSE.,0,3,                                    &
+['HO2       ','n-PrOO    '],                                                   &
+['n-PrOOH   ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50665,'B',.FALSE.,0,6,                                    &
+['ISO2      ','ISO2      '],                                                   &
+['MACR      ','MACR      ','HCHO      ','HO2       ']),                        &
+asad_flux_defn('RTE',50666,'B',.FALSE.,0,6,                                    &
+['MACRO2    ','MACRO2    '],                                                   &
+['HACET     ','MGLY      ','HCHO      ','CO        ']),                        &
+asad_flux_defn('RTE',50667,'B',.FALSE.,0,3,                                    &
+['MACRO2    ','MACRO2    '],                                                   &
+['HO2       ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50668,'B',.FALSE.,0,4,                                    &
+['MeBr      ','Cl        '],                                                   &
+['Br        ','HCl       ','          ','          ']),                        &
+asad_flux_defn('RTE',50669,'B',.FALSE.,0,4,                                    &
+['MeBr      ','O(1D)     '],                                                   &
+['Br        ','OH        ','          ','          ']),                        &
+asad_flux_defn('RTE',50670,'B',.FALSE.,0,4,                                    &
+['MeBr      ','OH        '],                                                   &
+['Br        ','H2O       ','          ','          ']),                        &
+asad_flux_defn('RTE',50671,'B',.FALSE.,0,5,                                    &
+['MeCO3     ','NO        '],                                                   &
+['MeOO      ','CO2       ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50672,'B',.FALSE.,0,5,                                    &
+['MeCO3     ','NO3       '],                                                   &
+['MeOO      ','CO2       ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50673,'B',.FALSE.,0,5,                                    &
+['MeCOCH2OO ','NO        '],                                                   &
+['MeCO3     ','HCHO      ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50674,'B',.FALSE.,0,5,                                    &
+['MeCOCH2OO ','NO3       '],                                                   &
+['MeCO3     ','HCHO      ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50675,'B',.FALSE.,0,5,                                    &
+['MeOO      ','MeCO3     '],                                                   &
+['HO2       ','HCHO      ','MeOO      ','          ']),                        &
+asad_flux_defn('RTE',50676,'B',.FALSE.,0,4,                                    &
+['MeOO      ','MeCO3     '],                                                   &
+['MeCO2H    ','HCHO      ','          ','          ']),                        &
+asad_flux_defn('RTE',50677,'B',.FALSE.,0,6,                                    &
+['MeOO      ','MeOO      '],                                                   &
+['HO2       ','HO2       ','HCHO      ','HCHO      ']),                        &
+asad_flux_defn('RTE',50678,'B',.FALSE.,0,4,                                    &
+['MeOO      ','MeOO      '],                                                   &
+['MeOH      ','HCHO      ','          ','          ']),                        &
+asad_flux_defn('RTE',50679,'B',.FALSE.,0,5,                                    &
+['MeOO      ','NO        '],                                                   &
+['HO2       ','HCHO      ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50680,'B',.FALSE.,0,3,                                    &
+['MeOO      ','NO        '],                                                   &
+['MeONO2    ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50681,'B',.FALSE.,0,5,                                    &
+['MeOO      ','NO3       '],                                                   &
+['HO2       ','HCHO      ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50682,'B',.FALSE.,0,4,                                    &
+['N         ','NO        '],                                                   &
+['N2        ','O(3P)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50683,'B',.FALSE.,0,4,                                    &
+['N         ','NO2       '],                                                   &
+['N2O       ','O(3P)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50684,'B',.FALSE.,0,4,                                    &
+['N         ','O2        '],                                                   &
+['NO        ','O(3P)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50685,'B',.FALSE.,0,4,                                    &
+['N2O5      ','H2O       '],                                                   &
+['HONO2     ','HONO2     ','          ','          ']),                        &
+asad_flux_defn('RTE',50686,'B',.FALSE.,0,3,                                    &
+['NO        ','ISO2      '],                                                   &
+['ISON      ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50687,'B',.FALSE.,0,6,                                    &
+['NO        ','ISO2      '],                                                   &
+['NO2       ','MACR      ','HCHO      ','HO2       ']),                        &
+asad_flux_defn('RTE',50688,'B',.FALSE.,0,5,                                    &
+['NO        ','MACRO2    '],                                                   &
+['MGLY      ','HCHO      ','HO2       ','          ']),                        &
+asad_flux_defn('RTE',50689,'B',.FALSE.,0,6,                                    &
+['NO        ','MACRO2    '],                                                   &
+['NO2       ','MeCO3     ','HACET     ','CO        ']),                        &
+asad_flux_defn('RTE',50690,'B',.FALSE.,0,4,                                    &
+['NO        ','NO3       '],                                                   &
+['NO2       ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50691,'B',.FALSE.,0,3,                                    &
+['NO        ','O3        '],                                                   &
+['NO2       ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50692,'B',.FALSE.,0,5,                                    &
+['NO2       ','NO3       '],                                                   &
+['NO        ','NO2       ','O2        ','          ']),                        &
+asad_flux_defn('RTE',50693,'B',.FALSE.,0,3,                                    &
+['NO2       ','O3        '],                                                   &
+['NO3       ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50694,'B',.FALSE.,0,4,                                    &
+['NO3       ','Br        '],                                                   &
+['BrO       ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50695,'B',.FALSE.,0,3,                                    &
+['NO3       ','C5H8      '],                                                   &
+['ISON      ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50696,'B',.FALSE.,0,4,                                    &
+['NO3       ','EtCHO     '],                                                   &
+['HONO2     ','EtCO3     ','          ','          ']),                        &
+asad_flux_defn('RTE',50697,'B',.FALSE.,0,5,                                    &
+['NO3       ','HCHO      '],                                                   &
+['HONO2     ','HO2       ','CO        ','          ']),                        &
+asad_flux_defn('RTE',50698,'B',.FALSE.,0,5,                                    &
+['NO3       ','MGLY      '],                                                   &
+['MeCO3     ','CO        ','HONO2     ','          ']),                        &
+asad_flux_defn('RTE',50699,'B',.FALSE.,0,4,                                    &
+['NO3       ','Me2CO     '],                                                   &
+['HONO2     ','MeCOCH2OO ','          ','          ']),                        &
+asad_flux_defn('RTE',50700,'B',.FALSE.,0,4,                                    &
+['NO3       ','MeCHO     '],                                                   &
+['HONO2     ','MeCO3     ','          ','          '])                         &
+]
+
+TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_bimol_rates3(50) = [           &
+asad_flux_defn('RTE',50701,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','CH4       '],                                                   &
+['HCHO      ','H2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50702,'B',.FALSE.,0,5,                                    &
+['O(1D)     ','CH4       '],                                                   &
+['HCHO      ','HO2       ','HO2       ','          ']),                        &
+asad_flux_defn('RTE',50703,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','CH4       '],                                                   &
+['OH        ','MeOO      ','          ','          ']),                        &
+asad_flux_defn('RTE',50704,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','CO2       '],                                                   &
+['O(3P)     ','CO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50705,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','H2        '],                                                   &
+['OH        ','H         ','          ','          ']),                        &
+asad_flux_defn('RTE',50706,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','H2O       '],                                                   &
+['OH        ','OH        ','          ','          ']),                        &
+asad_flux_defn('RTE',50707,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','HBr       '],                                                   &
+['HBr       ','O(3P)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50708,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','HBr       '],                                                   &
+['OH        ','Br        ','          ','          ']),                        &
+asad_flux_defn('RTE',50709,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','HCl       '],                                                   &
+['H         ','ClO       ','          ','          ']),                        &
+asad_flux_defn('RTE',50710,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','HCl       '],                                                   &
+['O(3P)     ','HCl       ','          ','          ']),                        &
+asad_flux_defn('RTE',50711,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','HCl       '],                                                   &
+['OH        ','Cl        ','          ','          ']),                        &
+asad_flux_defn('RTE',50712,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','N2        '],                                                   &
+['O(3P)     ','N2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50713,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','N2O       '],                                                   &
+['N2        ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50714,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','N2O       '],                                                   &
+['NO        ','NO        ','          ','          ']),                        &
+asad_flux_defn('RTE',50715,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','O2        '],                                                   &
+['O(3P)     ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50716,'B',.FALSE.,0,5,                                    &
+['O(1D)     ','O3        '],                                                   &
+['O2        ','O(3P)     ','O(3P)     ','          ']),                        &
+asad_flux_defn('RTE',50717,'B',.FALSE.,0,4,                                    &
+['O(1D)     ','O3        '],                                                   &
+['O2        ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50718,'B',.FALSE.,0,4,                                    &
+['O(3P)     ','BrO       '],                                                   &
+['O2        ','Br        ','          ','          ']),                        &
+asad_flux_defn('RTE',50719,'B',.FALSE.,0,4,                                    &
+['O(3P)     ','ClO       '],                                                   &
+['Cl        ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50720,'B',.FALSE.,0,4,                                    &
+['O(3P)     ','ClONO2    '],                                                   &
+['ClO       ','NO3       ','          ','          ']),                        &
+asad_flux_defn('RTE',50721,'B',.FALSE.,0,4,                                    &
+['O(3P)     ','H2        '],                                                   &
+['OH        ','H         ','          ','          ']),                        &
+asad_flux_defn('RTE',50722,'B',.FALSE.,0,4,                                    &
+['O(3P)     ','H2O2      '],                                                   &
+['OH        ','HO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50723,'B',.FALSE.,0,4,                                    &
+['O(3P)     ','HBr       '],                                                   &
+['OH        ','Br        ','          ','          ']),                        &
+asad_flux_defn('RTE',50724,'B',.FALSE.,0,5,                                    &
+['O(3P)     ','HCHO      '],                                                   &
+['OH        ','CO        ','HO2       ','          ']),                        &
+asad_flux_defn('RTE',50725,'B',.FALSE.,0,4,                                    &
+['O(3P)     ','HCl       '],                                                   &
+['OH        ','Cl        ','          ','          ']),                        &
+asad_flux_defn('RTE',50726,'B',.FALSE.,0,4,                                    &
+['O(3P)     ','HO2       '],                                                   &
+['OH        ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50727,'B',.FALSE.,0,4,                                    &
+['O(3P)     ','HOCl      '],                                                   &
+['OH        ','ClO       ','          ','          ']),                        &
+asad_flux_defn('RTE',50728,'B',.FALSE.,0,4,                                    &
+['O(3P)     ','NO2       '],                                                   &
+['NO        ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50729,'B',.FALSE.,0,4,                                    &
+['O(3P)     ','NO3       '],                                                   &
+['O2        ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50730,'B',.FALSE.,0,4,                                    &
+['O(3P)     ','O3        '],                                                   &
+['O2        ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50731,'B',.FALSE.,0,4,                                    &
+['O(3P)     ','OClO      '],                                                   &
+['O2        ','ClO       ','          ','          ']),                        &
+asad_flux_defn('RTE',50732,'B',.FALSE.,0,4,                                    &
+['O(3P)     ','OH        '],                                                   &
+['O2        ','H         ','          ','          ']),                        &
+asad_flux_defn('RTE',50733,'B',.FALSE.,0,4,                                    &
+['O3        ','C5H8      '],                                                   &
+['HO2       ','OH        ','          ','          ']),                        &
+asad_flux_defn('RTE',50734,'B',.FALSE.,0,6,                                    &
+['O3        ','C5H8      '],                                                   &
+['MACR      ','HCHO      ','MACRO2    ','MeCO3     ']),                        &
+asad_flux_defn('RTE',50735,'B',.FALSE.,0,6,                                    &
+['O3        ','C5H8      '],                                                   &
+['MeOO      ','HCOOH     ','CO        ','H2O2      ']),                        &
+asad_flux_defn('RTE',50736,'B',.FALSE.,0,6,                                    &
+['O3        ','MACR      '],                                                   &
+['MGLY      ','HCOOH     ','HO2       ','CO        ']),                        &
+asad_flux_defn('RTE',50737,'B',.FALSE.,0,6,                                    &
+['O3        ','MACR      '],                                                   &
+['MGLY      ','HCOOH     ','HO2       ','CO        ']),                        &
+asad_flux_defn('RTE',50738,'B',.FALSE.,0,4,                                    &
+['O3        ','MACR      '],                                                   &
+['OH        ','MeCO3     ','          ','          ']),                        &
+asad_flux_defn('RTE',50739,'B',.FALSE.,0,4,                                    &
+['O3        ','MACR      '],                                                   &
+['OH        ','MeCO3     ','          ','          ']),                        &
+asad_flux_defn('RTE',50740,'B',.FALSE.,0,4,                                    &
+['OClO      ','NO        '],                                                   &
+['NO2       ','ClO       ','          ','          ']),                        &
+asad_flux_defn('RTE',50741,'B',.FALSE.,0,4,                                    &
+['OH        ','C2H6      '],                                                   &
+['H2O       ','EtOO      ','          ','          ']),                        &
+asad_flux_defn('RTE',50742,'B',.FALSE.,0,4,                                    &
+['OH        ','C3H8      '],                                                   &
+['i-PrOO    ','H2O       ','          ','          ']),                        &
+asad_flux_defn('RTE',50743,'B',.FALSE.,0,4,                                    &
+['OH        ','C3H8      '],                                                   &
+['n-PrOO    ','H2O       ','          ','          ']),                        &
+asad_flux_defn('RTE',50744,'B',.FALSE.,0,3,                                    &
+['OH        ','C5H8      '],                                                   &
+['ISO2      ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50745,'B',.FALSE.,0,4,                                    &
+['OH        ','CH4       '],                                                   &
+['H2O       ','MeOO      ','          ','          ']),                        &
+asad_flux_defn('RTE',50746,'B',.FALSE.,0,3,                                    &
+['OH        ','CO        '],                                                   &
+['HO2       ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50747,'B',.FALSE.,0,4,                                    &
+['OH        ','ClO       '],                                                   &
+['HCl       ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50748,'B',.FALSE.,0,4,                                    &
+['OH        ','ClO       '],                                                   &
+['HO2       ','Cl        ','          ','          ']),                        &
+asad_flux_defn('RTE',50749,'B',.FALSE.,0,4,                                    &
+['OH        ','ClONO2    '],                                                   &
+['HOCl      ','NO3       ','          ','          ']),                        &
+asad_flux_defn('RTE',50750,'B',.FALSE.,0,4,                                    &
+['OH        ','EtCHO     '],                                                   &
+['H2O       ','EtCO3     ','          ','          '])                         &
+]
+
+TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_bimol_rates4(62) = [           &
+asad_flux_defn('RTE',50751,'B',.FALSE.,0,4,                                    &
+['OH        ','EtOOH     '],                                                   &
+['H2O       ','EtOO      ','          ','          ']),                        &
+asad_flux_defn('RTE',50752,'B',.FALSE.,0,5,                                    &
+['OH        ','EtOOH     '],                                                   &
+['H2O       ','MeCHO     ','OH        ','          ']),                        &
+asad_flux_defn('RTE',50753,'B',.FALSE.,0,4,                                    &
+['OH        ','H2        '],                                                   &
+['H2O       ','HO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50754,'B',.FALSE.,0,4,                                    &
+['OH        ','H2O2      '],                                                   &
+['H2O       ','HO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50755,'B',.FALSE.,0,4,                                    &
+['OH        ','HACET     '],                                                   &
+['MGLY      ','HO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50756,'B',.FALSE.,0,4,                                    &
+['OH        ','HBr       '],                                                   &
+['H2O       ','Br        ','          ','          ']),                        &
+asad_flux_defn('RTE',50757,'B',.FALSE.,0,5,                                    &
+['OH        ','HCHO      '],                                                   &
+['H2O       ','HO2       ','CO        ','          ']),                        &
+asad_flux_defn('RTE',50758,'B',.FALSE.,0,3,                                    &
+['OH        ','HCOOH     '],                                                   &
+['HO2       ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50759,'B',.FALSE.,0,4,                                    &
+['OH        ','HCl       '],                                                   &
+['H2O       ','Cl        ','          ','          ']),                        &
+asad_flux_defn('RTE',50760,'B',.FALSE.,0,3,                                    &
+['OH        ','HO2       '],                                                   &
+['H2O       ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50761,'B',.FALSE.,0,5,                                    &
+['OH        ','HO2NO2    '],                                                   &
+['H2O       ','NO2       ','O2        ','          ']),                        &
+asad_flux_defn('RTE',50762,'B',.FALSE.,0,4,                                    &
+['OH        ','HOCl      '],                                                   &
+['ClO       ','H2O       ','          ','          ']),                        &
+asad_flux_defn('RTE',50763,'B',.FALSE.,0,4,                                    &
+['OH        ','HONO      '],                                                   &
+['H2O       ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50764,'B',.FALSE.,0,4,                                    &
+['OH        ','HONO2     '],                                                   &
+['H2O       ','NO3       ','          ','          ']),                        &
+asad_flux_defn('RTE',50765,'B',.FALSE.,0,4,                                    &
+['OH        ','ISON      '],                                                   &
+['HACET     ','NALD      ','          ','          ']),                        &
+asad_flux_defn('RTE',50766,'B',.FALSE.,0,4,                                    &
+['OH        ','ISOOH     '],                                                   &
+['MACR      ','OH        ','          ','          ']),                        &
+asad_flux_defn('RTE',50767,'B',.FALSE.,0,3,                                    &
+['OH        ','MACR      '],                                                   &
+['MACRO2    ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50768,'B',.FALSE.,0,3,                                    &
+['OH        ','MACR      '],                                                   &
+['MACRO2    ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50769,'B',.FALSE.,0,3,                                    &
+['OH        ','MACROOH   '],                                                   &
+['MACRO2    ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50770,'B',.FALSE.,0,4,                                    &
+['OH        ','MGLY      '],                                                   &
+['MeCO3     ','CO        ','          ','          ']),                        &
+asad_flux_defn('RTE',50771,'B',.FALSE.,0,4,                                    &
+['OH        ','MPAN      '],                                                   &
+['HACET     ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50772,'B',.FALSE.,0,4,                                    &
+['OH        ','Me2CO     '],                                                   &
+['H2O       ','MeCOCH2OO ','          ','          ']),                        &
+asad_flux_defn('RTE',50773,'B',.FALSE.,0,4,                                    &
+['OH        ','Me2CO     '],                                                   &
+['H2O       ','MeCOCH2OO ','          ','          ']),                        &
+asad_flux_defn('RTE',50774,'B',.FALSE.,0,4,                                    &
+['OH        ','MeCHO     '],                                                   &
+['H2O       ','MeCO3     ','          ','          ']),                        &
+asad_flux_defn('RTE',50775,'B',.FALSE.,0,3,                                    &
+['OH        ','MeCO2H    '],                                                   &
+['MeOO      ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50776,'B',.FALSE.,0,3,                                    &
+['OH        ','MeCO3H    '],                                                   &
+['MeCO3     ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50777,'B',.FALSE.,0,4,                                    &
+['OH        ','MeCOCH2OOH'],                                                   &
+['H2O       ','MeCOCH2OO ','          ','          ']),                        &
+asad_flux_defn('RTE',50778,'B',.FALSE.,0,4,                                    &
+['OH        ','MeCOCH2OOH'],                                                   &
+['OH        ','MGLY      ','          ','          ']),                        &
+asad_flux_defn('RTE',50779,'B',.FALSE.,0,4,                                    &
+['OH        ','MeOH      '],                                                   &
+['HO2       ','HCHO      ','          ','          ']),                        &
+asad_flux_defn('RTE',50780,'B',.FALSE.,0,5,                                    &
+['OH        ','MeONO2    '],                                                   &
+['HCHO      ','NO2       ','H2O       ','          ']),                        &
+asad_flux_defn('RTE',50781,'B',.FALSE.,0,5,                                    &
+['OH        ','MeOOH     '],                                                   &
+['H2O       ','HCHO      ','OH        ','          ']),                        &
+asad_flux_defn('RTE',50782,'B',.FALSE.,0,4,                                    &
+['OH        ','MeOOH     '],                                                   &
+['H2O       ','MeOO      ','          ','          ']),                        &
+asad_flux_defn('RTE',50783,'B',.FALSE.,0,5,                                    &
+['OH        ','NALD      '],                                                   &
+['HCHO      ','CO        ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50784,'B',.FALSE.,0,4,                                    &
+['OH        ','NO3       '],                                                   &
+['HO2       ','NO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50785,'B',.FALSE.,0,4,                                    &
+['OH        ','O3        '],                                                   &
+['HO2       ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50786,'B',.FALSE.,0,4,                                    &
+['OH        ','OClO      '],                                                   &
+['HOCl      ','O2        ','          ','          ']),                        &
+asad_flux_defn('RTE',50787,'B',.FALSE.,0,4,                                    &
+['OH        ','OH        '],                                                   &
+['H2O       ','O(3P)     ','          ','          ']),                        &
+asad_flux_defn('RTE',50788,'B',.FALSE.,0,5,                                    &
+['OH        ','PAN       '],                                                   &
+['HCHO      ','NO2       ','H2O       ','          ']),                        &
+asad_flux_defn('RTE',50789,'B',.FALSE.,0,5,                                    &
+['OH        ','PPAN      '],                                                   &
+['MeCHO     ','NO2       ','H2O       ','          ']),                        &
+asad_flux_defn('RTE',50790,'B',.FALSE.,0,4,                                    &
+['OH        ','i-PrOOH   '],                                                   &
+['Me2CO     ','OH        ','          ','          ']),                        &
+asad_flux_defn('RTE',50791,'B',.FALSE.,0,4,                                    &
+['OH        ','i-PrOOH   '],                                                   &
+['i-PrOO    ','H2O       ','          ','          ']),                        &
+asad_flux_defn('RTE',50792,'B',.FALSE.,0,5,                                    &
+['OH        ','n-PrOOH   '],                                                   &
+['EtCHO     ','H2O       ','OH        ','          ']),                        &
+asad_flux_defn('RTE',50793,'B',.FALSE.,0,4,                                    &
+['OH        ','n-PrOOH   '],                                                   &
+['n-PrOO    ','H2O       ','          ','          ']),                        &
+asad_flux_defn('RTE',50794,'B',.FALSE.,0,5,                                    &
+['i-PrOO    ','NO        '],                                                   &
+['Me2CO     ','HO2       ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50795,'B',.FALSE.,0,5,                                    &
+['i-PrOO    ','NO3       '],                                                   &
+['Me2CO     ','HO2       ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50796,'B',.FALSE.,0,5,                                    &
+['n-PrOO    ','NO        '],                                                   &
+['EtCHO     ','HO2       ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50797,'B',.FALSE.,0,5,                                    &
+['n-PrOO    ','NO3       '],                                                   &
+['EtCHO     ','HO2       ','NO2       ','          ']),                        &
+asad_flux_defn('RTE',50798,'B',.FALSE.,0,5,                                    &
+['CS2       ','O(3P)     '],                                                   &
+['COS       ','SO2       ','CO        ','          ']),                        &
+asad_flux_defn('RTE',50799,'B',.FALSE.,0,4,                                    &
+['CS2       ','OH        '],                                                   &
+['COS       ','SO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50800,'B',.FALSE.,0,3,                                    &
+['DMS       ','OH        '],                                                   &
+['SO2       ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50801,'B',.FALSE.,0,4,                                    &
+['DMS       ','OH        '],                                                   &
+['MSA       ','SO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50802,'B',.FALSE.,0,3,                                    &
+['DMS       ','NO3       '],                                                   &
+['SO2       ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50803,'B',.FALSE.,0,3,                                    &
+['DMS       ','O(3P)     '],                                                   &
+['SO2       ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50804,'B',.FALSE.,0,4,                                    &
+['H2S       ','O(3P)     '],                                                   &
+['OH        ','SO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50805,'B',.FALSE.,0,4,                                    &
+['H2S       ','OH        '],                                                   &
+['SO2       ','H2O       ','          ','          ']),                        &
+asad_flux_defn('RTE',50806,'B',.FALSE.,0,4,                                    &
+['COS       ','O(3P)     '],                                                   &
+['CO        ','SO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50807,'B',.FALSE.,0,4,                                    &
+['COS       ','OH        '],                                                   &
+['CO2       ','SO2       ','          ','          ']),                        &
+asad_flux_defn('RTE',50808,'B',.FALSE.,0,3,                                    &
+['SO2       ','O3        '],                                                   &
+['SO3       ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50809,'B',.FALSE.,0,4,                                    &
+['SO3       ','H2O       '],                                                   &
+['H2SO4     ','H2O       ','          ','          ']),                        &
+asad_flux_defn('RTE',50810,'B',.FALSE.,0,3,                                    &
+['Monoterp  ','OH        '],                                                   &
+['Sec_Org   ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50811,'B',.FALSE.,0,3,                                    &
+['Monoterp  ','O3        '],                                                   &
+['Sec_Org   ','          ','          ','          ']),                        &
+asad_flux_defn('RTE',50812,'B',.FALSE.,0,3,                                    &
+['Monoterp  ','NO3       '],                                                   &
+['Sec_Org   ','          ','          ','          '])                         &
+]
+
 TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_photol_rates(60) = [           &
 asad_flux_defn('RTE',50813,'J',.FALSE.,0,5,                                    &
 ['EtOOH     ','PHOTON    '],                                                   &
@@ -9549,23 +10197,16 @@ IF (ukca_config%l_ukca_strattrop) THEN
     aa_ch4_ste = asad_ch4_ste
   END IF
   ! aa_ml
-  ! TODO: Hook up bimol rates
-  ! ALLOCATE(aa_ml(34 + 42 + 305))
-  ! aa_ml(1:34) = asad_wetdep_rates
-  ! aa_ml(35:76) = asad_drydep_rates
-  ! aa_ml(77:126) = asad_bimol_rates1
-  ! aa_ml(127:176) = asad_bimol_rates2
-  ! aa_ml(177:226) = asad_bimol_rates3
-  ! aa_ml(227:288) = asad_bimol_rates4
-  ! aa_ml(289:348) = asad_photol_rates
-  ! aa_ml(349:356) = asad_hetero_rates
-  ! aa_ml(357:381) = asad_termol_rates
-  ALLOCATE(aa_ml(34 + 42 + 60 + 8 + 25))
+  ALLOCATE(aa_ml(34 + 42 + 305))
   aa_ml(1:34) = asad_wetdep_rates
   aa_ml(35:76) = asad_drydep_rates
-  aa_ml(77:136) = asad_photol_rates
-  aa_ml(137:144) = asad_hetero_rates
-  aa_ml(145:169) = asad_termol_rates
+  aa_ml(77:126) = asad_bimol_rates1
+  aa_ml(127:176) = asad_bimol_rates2
+  aa_ml(177:226) = asad_bimol_rates3
+  aa_ml(227:288) = asad_bimol_rates4
+  aa_ml(289:348) = asad_photol_rates
+  aa_ml(349:356) = asad_hetero_rates
+  aa_ml(357:381) = asad_termol_rates
 
 ELSE IF (ukca_config%l_ukca_cristrat) THEN
   ! Select the asad diagnostics appropriate for CRI-Strat chemistry and
