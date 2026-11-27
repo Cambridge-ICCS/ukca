@@ -9001,28 +9001,28 @@ asad_flux_defn('DEP',50492,'D',.FALSE.,0,1,                                    &
 ]
 
 TYPE(asad_flux_defn), PUBLIC, PARAMETER :: asad_hetero_rates(8) = [            &
-asad_flux_defn('RTE',50873,'H',.FALSE.,0,1,                                    &
+asad_flux_defn('RTE',50873,'H',.FALSE.,0,4,                                    &
 ['ClONO2    ','H2O       '],                                                   &
 ['HOCl      ','HONO2     ','          ','          ']),                        &
-asad_flux_defn('RTE',50874,'H',.FALSE.,0,1,                                    &
+asad_flux_defn('RTE',50874,'H',.FALSE.,0,5,                                    &
 ['ClONO2    ','HCl       '],                                                   &
 ['Cl        ','Cl        ','HONO2     ','          ']),                        &
-asad_flux_defn('RTE',50875,'H',.FALSE.,0,1,                                    &
+asad_flux_defn('RTE',50875,'H',.FALSE.,0,5,                                    &
 ['HOCl      ','HCl       '],                                                   &
 ['Cl        ','Cl        ','H2O       ','          ']),                        &
-asad_flux_defn('RTE',50876,'H',.FALSE.,0,1,                                    &
+asad_flux_defn('RTE',50876,'H',.FALSE.,0,4,                                    &
 ['N2O5      ','H2O       '],                                                   &
 ['HONO2     ','HONO2     ','          ','          ']),                        &
-asad_flux_defn('RTE',50877,'H',.FALSE.,0,1,                                    &
+asad_flux_defn('RTE',50877,'H',.FALSE.,0,5,                                    &
 ['N2O5      ','HCl       '],                                                   &
 ['Cl        ','NO2       ','HONO2     ','          ']),                        &
-asad_flux_defn('RTE',50878,'H',.FALSE.,0,1,                                    &
+asad_flux_defn('RTE',50878,'H',.FALSE.,0,3,                                    &
 ['SO2       ','H2O2      '],                                                   &
 ['NULL0     ','          ','          ','          ']),                        &
-asad_flux_defn('RTE',50879,'H',.FALSE.,0,1,                                    &
+asad_flux_defn('RTE',50879,'H',.FALSE.,0,3,                                    &
 ['SO2       ','O3        '],                                                   &
 ['NULL1     ','          ','          ','          ']),                        &
-asad_flux_defn('RTE',50880,'H',.FALSE.,0,1,                                    &
+asad_flux_defn('RTE',50880,'H',.FALSE.,0,3,                                    &
 ['SO2       ','O3        '],                                                   &
 ['NULL2     ','          ','          ','          '])                         &
 ]
