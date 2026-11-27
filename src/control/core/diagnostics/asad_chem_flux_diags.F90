@@ -2314,6 +2314,9 @@ REAL, INTENT(IN)     :: all_tracers(row_length, rows, model_levels,            &
 INTEGER, INTENT(OUT) :: ierr           ! error code
 INTEGER :: l,m                   ! counters
 
+CHARACTER(LEN=errormessagelength) :: cmessage
+INTEGER :: errcode
+
 LOGICAL, SAVE :: firstcall=.TRUE.
 
 INTEGER(KIND=jpim), PARAMETER :: zhook_in  = 0
@@ -2340,6 +2343,18 @@ IF (firstcall) THEN
         END IF
       END SELECT
     END DO
+  END DO
+  DO l=1,n_chemdiags
+    IF (asad_chemdiags(l)%diag_type == cdout .AND.                            &
+        asad_chemdiags(l)%location <= 0) THEN
+      cmessage='SPECIES '//asad_chemdiags(l)%species                         &
+             //' IS NOT AN ADVECTED TRACER'
+      errcode=asad_chemdiags(l)%stash_number
+      WRITE(umMessage,'(2A,I0,A,I0)') cmessage, ' Error code: ',               &
+           errcode,' PE: ',mype
+      CALL umPrint(umMessage,src=RoutineName)
+      CALL ereport(ModuleName//':'//RoutineName,errcode,cmessage)
+    END IF
   END DO
 
   firstcall=.FALSE.
