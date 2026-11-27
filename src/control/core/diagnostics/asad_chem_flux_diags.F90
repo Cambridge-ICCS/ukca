@@ -36,7 +36,7 @@ USE asad_flux_dat,    ONLY: asad_chemical_fluxes, stashcode_ukca_chem_diag
 USE asad_mod,         ONLY: advt, dpd, dpw, fpsc1, fpsc2,                      &
                             jpspb, jpsph, jpspj, jpspt,                        &
                             ldepd, ldepw,                                      &
-                            nbrkx, nhrkx, nprkx, ntrkx, prk,                   &
+                            nbrkx, nhrkx, nprkx, ntrkx, prk, rk,               &
                             spb, speci, sph, spj, spt, y,                      &
                             jpspec, jpbk, jptk, jppj, jphk, jpnr, jpctr
 USE ukca_tropopause,  ONLY: L_stratosphere
@@ -1050,12 +1050,12 @@ DO l=1,n_chemdiags
         IF (asad_chemdiags(l)%num_products < 10) THEN
           WRITE(outformat,FMT='(A28,I1,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         ELSE
           WRITE(outformat,FMT='(A28,I2,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         END IF
         WRITE(umMessage,'(A)') outformat
@@ -1086,12 +1086,12 @@ DO l=1,n_chemdiags
         IF (asad_chemdiags(l)%num_products < 10) THEN
           WRITE(outformat,FMT='(A28,I1,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         ELSE
           WRITE(outformat,FMT='(A28,I2,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         END IF
         WRITE(cmessage,FMT=TRIM(ADJUSTL(outformat)))                           &
@@ -1117,12 +1117,12 @@ DO l=1,n_chemdiags
         IF (asad_chemdiags(l)%num_products < 10) THEN
           WRITE(outformat,FMT='(A28,I1,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         ELSE
           WRITE(outformat,FMT='(A28,I2,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         END IF
         WRITE(cmessage,FMT=TRIM(ADJUSTL(outformat)))                           &
@@ -1151,12 +1151,12 @@ DO l=1,n_chemdiags
         IF (asad_chemdiags(l)%num_products < 10) THEN
           WRITE(outformat,FMT='(A28,I1,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         ELSE
           WRITE(outformat,FMT='(A28,I2,A7)')                                   &
                '(A13,1X,A1,1X,2(A,1X),A2,1X,',                                 &
-               asad_chemdiags(l)%num_products,                                 &
+               MAX(asad_chemdiags(l)%num_products,1),                          &
                '(A,1X))'
         END IF
         WRITE(cmessage,FMT=TRIM(ADJUSTL(outformat)))                           &
@@ -1462,7 +1462,7 @@ END SUBROUTINE asad_chemical_diagnostics_init
 
 ! #####################################################################
 SUBROUTINE asad_chemical_diagnostics(row_length, rows, model_levels,           &
-     chunk_size, dpd_full, dpw_full, prk_full, y_full,                         &
+     chunk_size, dpd_full, dpw_full, prk_full, rk_full, y_full,                &
      ix, jy, klevel, volume, ierr)
 
 USE ukca_config_constants_mod, ONLY: avogadro
@@ -1482,6 +1482,7 @@ INTEGER, INTENT(IN OUT) :: ierr          ! error code
 REAL, INTENT(IN)    :: dpd_full(chunk_size,jpspec)
 REAL, INTENT(IN)    :: dpw_full(chunk_size,jpspec)
 REAL, INTENT(IN)    :: prk_full(chunk_size,jpnr)
+REAL, INTENT(IN)    :: rk_full(chunk_size,jpnr)
 REAL, INTENT(IN)    :: y_full(chunk_size,jpspec)
 
 LOGICAL, SAVE :: firstcall=.TRUE.
@@ -1540,7 +1541,7 @@ IF (ukca_config%l_ukca_asad_full) THEN
 !$OMP PARALLEL DEFAULT(NONE) PRIVATE(l)                                        &
 !$OMP SHARED(asad_chemdiags, convfac, dpd_full, dpw_full, L_stratosphere,      &
 !$OMP        model_levels, n_chemdiags, prk_full, row_length, rows, volume,    &
-!$OMP        y_full)
+!$OMP        y_full, rk_full)
 !$OMP DO SCHEDULE(DYNAMIC)
   DO l=1,n_chemdiags
     ! in this case ASAD is being called over the full domain so we
@@ -1550,6 +1551,15 @@ IF (ukca_config%l_ukca_asad_full) THEN
       asad_chemdiags(l)%throughput(:,:,:) =                                    &
            RESHAPE(prk_full(:,asad_chemdiags(l)%location),                     &
            [row_length,rows,model_levels])*volume(:,:,:)*convfac
+      IF (asad_chemdiags(l)%tropospheric_mask) THEN
+        WHERE (L_stratosphere(:,:,:))
+          asad_chemdiags(l)%throughput(:,:,:) = 0.0
+        END WHERE
+      END IF
+    CASE (cdrte)
+      asad_chemdiags(l)%throughput(:,:,:) =                                    &
+           RESHAPE(rk_full(:,asad_chemdiags(l)%location),                      &
+           [row_length,rows,model_levels])
       IF (asad_chemdiags(l)%tropospheric_mask) THEN
         WHERE (L_stratosphere(:,:,:))
           asad_chemdiags(l)%throughput(:,:,:) = 0.0
@@ -1603,6 +1613,14 @@ ELSE IF (ukca_config%l_ukca_asad_columns) THEN
           asad_chemdiags(l)%throughput(ix,jy,:) = 0.0
         END WHERE
       END IF
+    CASE (cdrte)
+      asad_chemdiags(l)%throughput(ix,jy,:) =                                  &
+           rk_full(:,asad_chemdiags(l)%location)
+      IF (asad_chemdiags(l)%tropospheric_mask) THEN
+        WHERE (L_stratosphere(ix,jy,:))
+          asad_chemdiags(l)%throughput(ix,jy,:) = 0.0
+        END WHERE
+      END IF
     CASE (cddep)
       SELECT CASE (asad_chemdiags(l)%rxn_type)
       CASE (cddry) ! DRY DEP
@@ -1646,6 +1664,14 @@ ELSE
       asad_chemdiags(l)%throughput(:,:,klevel) =                               &
            RESHAPE(prk(:,asad_chemdiags(l)%location),                          &
            [row_length,rows])*volume(:,:,klevel)*convfac
+      IF (asad_chemdiags(l)%tropospheric_mask) THEN
+        WHERE (L_stratosphere(:,:,klevel))
+          asad_chemdiags(l)%throughput(:,:,klevel) = 0.0
+        END WHERE
+      END IF
+    CASE (cdrte)
+      asad_chemdiags(l)%throughput(:,:,klevel) =                               &
+           RESHAPE(rk(:,asad_chemdiags(l)%location),[row_length,rows])
       IF (asad_chemdiags(l)%tropospheric_mask) THEN
         WHERE (L_stratosphere(:,:,klevel))
           asad_chemdiags(l)%throughput(:,:,klevel) = 0.0
